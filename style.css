@@ -1,0 +1,182 @@
+body {
+  height: 80vh;
+  background-color: hsl(0, 10%, 12%);
+  background-image: url("https://img.freepik.com/premium-photo/fresh-juicy-burger-black-background_287187-46.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  position: absolute;
+  padding: 2rem;
+  color: white;
+}
+
+.top-left {
+  top: 2rem;
+  left: 2rem;
+}
+
+.top-right {
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.top-right input[type="text"] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.top-right a {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+.top-right a:hover {
+  color: hsl(9, 84%, 57%);
+}
+
+.bottom-left {
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.bottom-right {
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.site-name {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 0.625rem;
+  font-size: 1.5rem;
+  display: inline-block;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.order-button {
+  display: inline-block;
+  background-color: hsl(9, 84%, 57%);
+  padding: 0.625rem 1.25rem;
+  font-size: 1.875rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.order-button:hover {
+  background-color: hsl(9, 84%, 67%);
+}
+
+.bottom-left h1 {
+  bottom: 3rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+}
+
+.bottom-left p {
+  font-size: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.bottom-right h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+
+.bottom-right .phone-number {
+  font-weight: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.3125rem;
+}
+
+/* animations */
+
+@keyframes slideLeft {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* responsive design */
+@media(max-width:700px) {
+  .bottom-right {
+    margin-bottom: -40px;
+  }
+  .container .bottom-left h1{
+    font-size: 2rem; margin-left: 0; 
+  }
+  nav a{
+    margin-right: -50px; display: inline-block;
+    margin-top: -24px; padding: 6px;
+  }
+  .top-left p,
+  .top-left .site-name{
+    margin-left: -60px;
+   }
+   .order-button,
+   .bottom-left h1{
+     margin-bottom: 50px;
+     margin-left: 10px;
+     color: hsl(60, 10%, 88%);
+     align-items: center;
+   }
+   body{
+    background-size: cover;
+    background-position: center;
+    height: vh;
+    width: 100%;
+   }
+}
